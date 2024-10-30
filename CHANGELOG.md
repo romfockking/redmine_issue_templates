@@ -1,5 +1,33 @@
 ## Changelog
 
+### 1.2.0
+
+Bugfixes and assets management improvements. Many thanks to each of you for your contributions.
+
+* Feature: CircleCI workflow and Orb improvements (@hidakatsuya, @naopontan) (#109, #112, #114)
+* Feature: Built and updated assets/issue_templates.js (@hidakatsuya) (#107)
+* Feature: For Rails 7.2 or later, use the new syntax for the serialize method (@hidakatsuya) (#104)
+* Bugfix: Fix 'Replace subject and description' option was not applied (@maeda-m) (#103)
+* Bugfix: Use ApplicationRecord instead of ActiveRecord::Base (@maeda-m, @nusohiro) (#96)
+* Bugfix: Fix Redmine Orb (@mk2) (#88, #89)
+* Bugfix: Fix failing specs (@routetheta) (#78)
+* Feature: Add dispatchEvent (@ishikawa999) (#77)
+* Feature: Refactoring scripts (@routetheta) (#74)
+* Feature: Enable newer Ruby versions (> 3.1) in CircleCI tests (@telegib) (#73)
+
+### 1.1.2
+
+Bugfixes and CircleCI tests improvements. Thank you all for your invaluable contributions. 
+
+* Bugfix: Fix project bound global note template deletion (@mk2) (#65)
+* Bugfix: Load default template when tracker changed (@kumojima) (#63)
+* Bugfix: Avoid parameter loss when sort issue_template (@kumojima) (#61)
+* Feature: Improve of required validation (@yui-har) (#59)
+* Feature: CircleCI integration tests improvements (@naopontan) (#57)
+* Feature: Improve sort order of note templates in pop-up dialog (@yui-har) (#56)
+* Feature: Improved getting the Role IDs (@yui-har) (#53)
+* Feature: Improve Selenium webdriver options (@yui-har) (#51)
+
 ### 1.1.1
 
 Bugfixes and support for Redmine 5.x. Thanks everybody for the contributions.
