@@ -581,6 +581,41 @@ class NOTE_TEMPLATE {
     });
   }
 }
+document.addEventListener('DOMContentLoadedd', function () {
+  console.log(coucou);
+  // Identifiant du champ personnalisé à surveiller (modifiez selon votre besoin)
+  const customFieldId = 'custom_field_values_1'; // Remplacez par l'ID réel
+
+  // Liste des modèles associés aux valeurs du champ personnalisé
+  const templates = {
+    'Option 1': {
+      subject: 'Modèle pour Option 1',
+      description: 'Description pré-remplie pour Option 1.'
+    },
+    'Option 2': {
+      subject: 'Modèle pour Option 2',
+      description: 'Description pré-remplie pour Option 2.'
+    }
+  };
+
+  // Fonction pour appliquer le modèle en fonction de la valeur du champ personnalisé
+  function applyTemplate() {
+    const customField = document.getElementById(customFieldId);
+    if (!customField) return;
+
+    const selectedValue = customField.value;
+    if (templates[selectedValue]) {
+      document.getElementById('issue_subject').value = templates[selectedValue].subject;
+      document.getElementById('issue_description').value = templates[selectedValue].description;
+    }
+  }
+
+  // Ajouter un écouteur d'événements pour détecter les changements
+  const customField = document.getElementById(customFieldId);
+  if (customField) {
+    customField.addEventListener('change', applyTemplate);
+  }
+});
 
 window.ISSUE_TEMPLATE = ISSUE_TEMPLATE;
 window.NOTE_TEMPLATE = NOTE_TEMPLATE;
